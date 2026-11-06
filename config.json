@@ -1,0 +1,22 @@
+{
+  "short_window": 20,
+  "long_window": 50,
+
+  "auto_trader": {
+    "universe": [
+      "NVDA", "AMD", "AVGO", "QCOM", "TXN", "INTC", "MU", "AMAT", "LRCX", "KLAC",
+      "ADI", "MRVL", "ARM", "TSM", "ASML", "NXPI", "MCHP", "ON",
+      "AAPL", "MSFT", "GOOGL", "AMZN", "META", "ORCL", "CRM", "ADBE", "NOW", "INTU",
+      "IBM", "CSCO", "PLTR", "NFLX", "PANW", "CRWD", "SHOP", "UBER"
+    ],
+    "exclude_symbols": ["AAPL"],
+    "max_debates_per_day": 3,
+    "min_confidence": 65,
+    "min_backtest_pct": 10,
+    "trade_dollars": 1000,
+    "max_positions": 3,
+    "stop_loss_pct": 8,
+    "web_search": true,
+    "rebuttal": true
+  }
+}

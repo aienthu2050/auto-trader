@@ -1,0 +1,9 @@
+# secrets - never commit
+.env
+# runtime data: trade state, logs and AI reports
+*_state.json
+logs/
+reports/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.tradingbot.autotrader</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/moorthi/.pyenv/versions/3.13.18/bin/python3</string>
+        <string>/Users/moorthi/auto-trader/auto_trader.py</string>
+        <string>--scheduled</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/moorthi/auto-trader</string>
+
+    <!-- Wake at :30 past every hour. The bot itself checks Alpaca's market clock
+         and trades only once per trading day, so this lands on the 9:30am ET open
+         whatever the NZ/US daylight-saving offsets are, and skips US holidays. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <!-- Python errors (crashes, missing packages) land here; normal activity goes to logs/auto_trader.log -->
+    <key>StandardOutPath</key>
+    <string>/Users/moorthi/auto-trader/logs/autotrader.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/moorthi/auto-trader/logs/autotrader.err.log</string>
+</dict>
+</plist>
